@@ -19,7 +19,7 @@ public class UserController {
     @PostMapping("/join")
     public ResponseEntity<String> join(@RequestBody UserJoinRequest userJoinRequest) {
         log.info("{}", userJoinRequest);
-        userService.create(userJoinRequest);
+        userService.join(userJoinRequest);
         return ResponseEntity.ok().body("join success");
 
     }
